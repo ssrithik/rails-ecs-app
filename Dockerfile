@@ -9,7 +9,7 @@
 
 # Make sure RUBY_VERSION matches the Ruby version in .ruby-version
 ARG RUBY_VERSION=3.2.10
-FROM ruby:3.2.10-slim AS base
+FROM public.ecr.aws/docker/library/ruby:3.2.10-slim AS base
 
 # Rails app lives here
 WORKDIR /rails
