@@ -5,4 +5,9 @@ if [ "${@: -2:1}" == "./bin/rails" ] && [ "${@: -1:1}" == "server" ]; then
   ./bin/rails db:prepare
 fi
 
+echo "Preparing database..."
+bundle exec rails db:prepare
+
+
+echo "Starting Rails server..."
 exec "${@}"
