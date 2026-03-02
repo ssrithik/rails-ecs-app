@@ -23,3 +23,7 @@ production:
   cable:
     <<: *default
     database: student_portal_production
+
+  queue:
+    <<: *default
+    database: student_portal_production
