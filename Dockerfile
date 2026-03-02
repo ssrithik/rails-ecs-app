@@ -46,6 +46,8 @@ RUN bundle install && \
 # Copy full application
 COPY . .
 
+RUN cat config/database.yml
+
 RUN bundle exec bootsnap precompile -j 1 --gemfile
 RUN bundle exec bootsnap precompile -j 1 app/ lib/
 
