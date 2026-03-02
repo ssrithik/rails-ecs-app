@@ -6,3 +6,15 @@ default: &default
   password: <%= ENV["DB_PASSWORD"] %>
   host: <%= ENV["DB_HOST"] %>
   port: 3306
+
+development:
+  <<: *default
+  database: student_portal_development
+
+test:
+  <<: *default
+  database: student_portal_test
+
+production:
+  <<: *default
+  database: student_portal_production
