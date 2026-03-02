@@ -16,5 +16,10 @@ test:
   database: student_portal_test
 
 production:
-  <<: *default
-  database: student_portal_production
+  primary:
+    <<: *default
+    database: student_portal_production
+
+  cable:
+    <<: *default
+    database: student_portal_production
