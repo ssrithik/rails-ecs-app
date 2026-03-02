@@ -27,3 +27,7 @@ production:
   queue:
     <<: *default
     database: student_portal_production
+
+  cache:
+    <<: *default
+    database: student_portal_production
